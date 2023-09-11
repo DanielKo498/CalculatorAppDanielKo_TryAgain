@@ -4,17 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="498dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:text="6"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:text="5"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:text="2"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:text="1"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:text="9"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="441dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:text="3"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:text="8"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="441dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:text="7"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="441dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:text="4"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="384dp" />
 
     <EditText
         android:id="@+id/num2"
         android:layout_width="134dp"
         android:layout_height="50dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
         android:ems="10"
         android:hint="Input 2"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:paddingStart="40dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,24 +106,24 @@
         android:id="@+id/num1"
         android:layout_width="134dp"
         android:layout_height="50dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:hint="Input 1"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:paddingStart="40dp"
         android:rotationX="360"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/answerTV"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
+        android:layout_width="83dp"
+        android:layout_height="58dp"
         android:layout_marginTop="176dp"
-        android:layout_marginEnd="36dp"
-        android:paddingLeft="38dp"
+        android:layout_marginEnd="40dp"
+        android:paddingLeft="20dp"
         android:paddingTop="35dp"
         android:text="Answer"
         android:textSize="18sp"
@@ -51,8 +133,8 @@
     <Button
         android:id="@+id/addButton"
         android:layout_width="58dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="270dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="312dp"
         android:layout_marginEnd="20dp"
         android:onClick="add"
         android:text="+"
@@ -63,34 +145,37 @@
     <Button
         android:id="@+id/multiplyButton"
         android:layout_width="58dp"
-        android:layout_height="56dp"
+        android:layout_height="58dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="280dp"
         android:onClick="multiply"
         android:text="X"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtractButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/subtractButton"
-        android:layout_width="59dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="336dp"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
         android:layout_marginEnd="20dp"
         android:onClick="subtract"
         android:text="-"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/addButton" />
 
     <Button
         android:id="@+id/divideButton"
         android:layout_width="58dp"
-        android:layout_height="56dp"
+        android:layout_height="58dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="216dp"
         android:onClick="divide"
         android:text="/"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplyButton"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
