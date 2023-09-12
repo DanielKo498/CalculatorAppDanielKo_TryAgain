@@ -16,6 +16,7 @@
         android:layout_marginStart="14dp"
         android:layout_marginBottom="292dp"
         android:text="1"
+        android:onClick="numbers"
         android:textColor="@color/white"
         android:textColorHighlight="@color/FremdGreen"
         android:textColorLink="@color/FremdGreen"
@@ -194,6 +195,7 @@
         android:inputType="number|numberDecimal"
         android:paddingStart="40dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -210,6 +212,7 @@
         android:paddingStart="40dp"
         android:rotationX="360"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
