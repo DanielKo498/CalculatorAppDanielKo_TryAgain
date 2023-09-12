@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="FremdGreen">#0EAD1E</color>
+    <color name="FremdGold">#FFC800</color>
+    <color name="fremdGold">#FFD700</color>
 </resources>

@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void switchScreens(View v){
+
+    }
+
     public void add(View v){
         EditText input1 = findViewById(R.id.num1);
         double num1 = Double.parseDouble(input1.getText().toString());
