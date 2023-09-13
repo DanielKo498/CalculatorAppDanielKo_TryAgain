@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     public String result = "";
-    double num1;
-    double num2;
+    double input1;
+    double input2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,55 +25,56 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void numbers(View v){
-        EditText input1 = findViewById(R.id.num1);
-        if(v.getId() == R.id.button1){
-            result += 1;
+        TextView input1 = findViewById(R.id.num1);
+        Double num1 = 0.0;
+        Double num2 = 0.0;
+        while(v.getId() != R.id.addButton || v.getId() != R.id.subtractButton || v.getId() != R.id.divideButton || v.getId() != R.id.multiplyButton){
+            if(v.getId() == R.id.button1){
+                result += 1;
+                num1 += 1;
+                input1.setText(result);
+            }
+            if(v.getId() == R.id.button2){
+                result += 2;
+                num2 += 2;
+                input1.setText(result);
+            }
+        }
+
+        // add operation to result after while loop breaks
+        if(v.getId() == R.id.addButton){
+            result+= "+";
             input1.setText(result);
         }
-        // get number
-        // if number equals this then set it or add to the editText
-        // set
+
+        while(v.getId() != R.id.addButton || v.getId() != R.id.subtractButton || v.getId() != R.id.divideButton || v.getId() != R.id.multiplyButton){
+            if(v.getId() == R.id.button1){
+                result += 1;
+                num2 += 1;
+                input1.setText(result);
+            }
+            if(v.getId() == R.id.button2){
+                result += 2;
+                num2 += 2;
+                input1.setText(result);
+            }
+        }
+        if(v.getId() == R.id.addButton){
+            TextView answerTV = findViewById(R.id.answerTV);
+            String answer = add(num1, num2) + "";
+            answerTV.setText(answer);
+        }
+
+
     }
 
-    public void add(View v){
-
-        EditText input1 = findViewById(R.id.num1);
-        double num1 = Double.parseDouble(input1.getText().toString());
-        EditText input2 = findViewById(R.id.num2);
-        double num2 = Double.parseDouble(input2.getText().toString());
+    public static Double add(Double input1, Double input2){
+        double num1 = (input1);
+        double num2 = (input2);
         double sum = num1 + num2;
-        TextView answerTV = findViewById(R.id.answerTV);
-        answerTV.setText("" + sum);
+        return sum;
+
     }
 
-    public void subtract(View v){
-        EditText input1 = findViewById(R.id.num1);
-        double num1 = Double.parseDouble(input1.getText().toString());
-        EditText input2 = findViewById(R.id.num2);
-        double num2 = Double.parseDouble(input2.getText().toString());
-        double sum = num1 - num2;
-        TextView answerTV = findViewById(R.id.answerTV);
-        answerTV.setText("" + sum);
-    }
-
-    public void multiply(View v){
-        EditText input1 = findViewById(R.id.num1);
-        double num1 = Double.parseDouble(input1.getText().toString());
-        EditText input2 = findViewById(R.id.num2);
-        double num2 = Double.parseDouble(input2.getText().toString());
-        double product = num1*num2;
-        TextView answerTV = findViewById(R.id.answerTV);
-        answerTV.setText("" + product);
-    }
-
-    public void divide(View v){
-        EditText input1 = findViewById(R.id.num1);
-        double num1 = Double.parseDouble(input1.getText().toString());
-        EditText input2 = findViewById(R.id.num2);
-        double num2 = Double.parseDouble(input2.getText().toString());
-        double answer = num1/num2;
-        TextView answerTV = findViewById(R.id.answerTV);
-        answerTV.setText("" + answer);
-    }
-    // hello
+    
 }
