@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
     <dimen name="title_card">40dp</dimen>
     <dimen name="TextBoxFontSize">15dp</dimen>

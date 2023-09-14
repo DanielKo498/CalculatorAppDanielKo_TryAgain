@@ -5,7 +5,7 @@
     <color name="FremdGreen">#0EAD1E</color>
     <color name="FremdGold">#FFC800</color>
     <color name="fremdGold">#FFD700</color>
-    <color name="seed">ffe9ce</color>
+    <color name="seed">#ffe9ce</color>
     <color name="md_theme_light_primary">#805600</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#FFDDB0</color>
@@ -66,5 +66,6 @@
     <color name="md_theme_dark_surfaceTint">#FEBA4B</color>
     <color name="md_theme_dark_outlineVariant">#4F4539</color>
     <color name="md_theme_dark_scrim">#000000</color>
+    <color name="abc_secondary_text_material_light">#FFFFFF</color>
     <color name="CustomColor1">#97514F</color>
 </resources>
