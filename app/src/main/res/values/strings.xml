@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CalculatorApp_DanielKo_TryAgain</string>
+    <string name="Calculator_name">Calculator</string>
+    <string name="operations">Choose an Operation:</string>
 </resources>

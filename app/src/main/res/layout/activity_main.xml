@@ -4,71 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/md_theme_dark_error"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="0dp">
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/multiplyButton"
         android:layout_width="83dp"
         android:layout_height="86dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginBottom="292dp"
-        android:text="1"
-        android:onClick="numbers"
-        android:textColor="@color/white"
-        android:textColorHighlight="@color/FremdGreen"
-        android:textColorLink="@color/FremdGreen"
-        app:backgroundTint="@color/FremdGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/addButton"
-        android:layout_width="83dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="296dp"
-        android:layout_marginBottom="292dp"
-        android:backgroundTint="@color/FremdGold"
-        android:onClick="add"
-        android:text="+"
-        app:iconPadding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="83dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginBottom="292dp"
-        android:backgroundTint="@color/FremdGreen"
-        android:text="3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="83dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="@color/FremdGreen"
-        android:text="9"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/subtractButton"
-        android:layout_width="83dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="296dp"
-        android:layout_marginBottom="196dp"
-        android:backgroundTint="@color/FremdGold"
-        android:onClick="subtract"
-        android:text="-"
-        android:textSize="24sp"
+        android:layout_marginStart="208dp"
+        android:layout_marginBottom="276dp"
+        android:backgroundTint="@color/md_theme_dark_tertiary"
+        android:onClick="multiply"
+        android:padding="@dimen/buttonPadding"
+        android:text="X"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -77,140 +28,95 @@
         android:layout_width="83dp"
         android:layout_height="86dp"
         android:layout_marginStart="296dp"
-        android:layout_marginBottom="2dp"
-        android:backgroundTint="@color/FremdGold"
+        android:layout_marginBottom="276dp"
+        android:backgroundTint="@color/md_theme_dark_tertiary"
         android:onClick="divide"
+        android:padding="@dimen/buttonPadding"
         android:text="/"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/addButton"
         android:layout_width="83dp"
         android:layout_height="86dp"
-        android:layout_marginStart="106dp"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="@color/FremdGreen"
-        android:text="8"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="276dp"
+        android:backgroundTint="@color/md_theme_dark_tertiary"
+        android:onClick="add"
+        android:text="+"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/md_theme_dark_onSecondaryContainer"
+        android:textColorLink="@color/md_theme_dark_onSecondaryContainer"
+        app:iconPadding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/subtractButton"
         android:layout_width="83dp"
         android:layout_height="86dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginBottom="196dp"
-        android:backgroundTint="@color/FremdGreen"
-        android:text="4"
+        android:layout_marginStart="116dp"
+        android:layout_marginBottom="276dp"
+        android:backgroundTint="@color/md_theme_dark_tertiary"
+        android:onClick="subtract"
+        android:text="-"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/buttonDecimal"
-        android:layout_width="83dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginBottom="3dp"
-        android:backgroundTint="@color/FremdGreen"
-        android:text="."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Input 2"
+        android:inputType="number|numberDecimal"
+        android:paddingStart="40dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="@dimen/TextBoxFontSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="83dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="106dp"
-        android:layout_marginBottom="196dp"
-        android:backgroundTint="@color/FremdGreen"
-        android:text="5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/multiplyButton"
-        android:layout_width="83dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="296dp"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="@color/FremdGold"
-        android:onClick="multiply"
-        android:text="X"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="83dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="106dp"
-        android:layout_marginBottom="292dp"
-        android:backgroundTint="@color/FremdGreen"
-        android:text="2"
-        android:onClick="numbers"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="83dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginBottom="196dp"
-        android:backgroundTint="@color/FremdGreen"
-        android:text="6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button0"
-        android:layout_width="175dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginBottom="4dp"
-        android:backgroundTint="@color/FremdGreen"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="83dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="@color/FremdGreen"
-        android:text="7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
+    <EditText
         android:id="@+id/num1"
-        android:layout_width="180dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="168dp"
         android:ems="10"
         android:hint="Input 1"
         android:inputType="number|numberDecimal"
-        android:padding="10dp"
+        android:paddingStart="40dp"
         android:rotationX="360"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textSize="@dimen/TextBoxFontSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/answerTV"
-        android:layout_width="100dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="156dp"
+        android:layout_width="231dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginEnd="84dp"
         android:padding="10dp"
         android:text="Answer"
-        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/equationTV"
+        android:layout_width="231dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="484dp"
+        android:layout_marginEnd="84dp"
+        android:padding="10dp"
+        android:text="Equation"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -221,9 +127,43 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="7dp"
-        android:onClick="switchScreens"
         android:text="Switch"
-        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clearAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="640dp"
+        android:onClick="clearAll"
+        android:text="Clear All"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_name"
+        android:layout_width="193dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="109dp"
+        android:text="@string/Calculator_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/title_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="159dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="320dp"
+        android:text="@string/operations"
+        android:textSize="@dimen/TextBoxFontSize"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
